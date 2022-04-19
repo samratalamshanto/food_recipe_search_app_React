@@ -1,0 +1,30 @@
+*{
+margin: 0;
+padding: 0;
+}
+
+.main_div_recipie{
+    background-color: bisque;
+    height: 500px;
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.small_div{
+    margin: 6px;
+    padding: 2px;
+}
+
+.recipie_div{
+    display: flex;
+    flex-direction: column;
+    background-color: #ffasdf;
+    justify-items:center;
+    align-items : center;
+}
