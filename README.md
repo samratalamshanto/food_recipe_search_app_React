@@ -13,4 +13,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Here, First fetch the available free recipe data from this site and then show it in this project. We can search any recipe in the search button and the result of search recipe will display in the screen with title, description, calories and image of the recipe.
 
+### Use own api_id and api_key in src/html.js to run this project. api_id and api_key will be availabel in the website after sign in.
+
 
