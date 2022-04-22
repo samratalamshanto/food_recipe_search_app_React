@@ -11,17 +11,11 @@ export default function Html() {
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("chicken");
 
-  const APP_ID = "0c###e";   //use API_ID from the website edamam.com
-  const APP_KEY = "c169d7931####9c9e";   //use API_Key from the website edamam.com
+  const APP_ID = "0c###e";   //use own API_ID from the website edamam.com
+  const APP_KEY = "c169d7931####9c9e";   //use own API_Key from the website edamam.com
   const req = `https://api.edamam.com/search?q=${query}&app_id=${APP_ID}&app_key=${APP_KEY}`;
 
-  const onChangeSearch = (e) => {
-    setSearch(e.target.value);
-  };
-  const onClickForm = (e) => {
-    e.preventDefault();
-    setQuery(search); //when search anything wrote and then submit then this query will search
-  };
+
 
   useEffect(() => {
     console.log("Use Effect has been called.");
@@ -32,6 +26,16 @@ export default function Html() {
     const response = await fetch(req);
     const data = await response.json();
     setRecipies(data.hits); //data store in the recipie using setRecipe
+  };
+
+  const onChangeSearch = (e) => {
+    setSearch(e.target.value);
+  };
+  const onClickForm = (e) => {
+    e.preventDefault();
+    setQuery(search); //when search anything wrote and then submit then this query will search
+  setSearch("");
+
   };
 
   return (
